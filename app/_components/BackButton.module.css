@@ -1,0 +1,38 @@
+.back {
+  margin-bottom: 50px;
+  border: none;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.back svg {
+  height: 20px;
+}
+
+.back {
+  box-shadow: 0 0 3px var(--shadow-color);
+  background-color: var(--white);
+  border: none;
+}
+
+/* dark mode */
+
+:global(.dark) .back {
+  background-color: var(--dark-blue);
+  color: var(--light-gray);
+  box-shadow: 1px 1px 8px 0px var(--shadow-dark-color);
+  color: var(--light-gray);
+}
+
+/* media query */
+
+@media (min-width: 950px) {
+  .back {
+    margin: 20px 0 70px;
+  }
+}

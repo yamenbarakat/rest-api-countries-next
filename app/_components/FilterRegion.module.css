@@ -1,0 +1,61 @@
+.filter {
+  width: 220px;
+  position: relative;
+  font-size: 14px;
+}
+
+.filter .dropdown,
+.filter ul {
+  border-radius: 6px;
+  width: 100%;
+  font-weight: 600;
+  box-shadow: 1px 1px 8px 0px var(--shadow-color);
+  background-color: var(--white);
+}
+
+.dropdown {
+  border: none;
+  padding: 16px 22px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  letter-spacing: 0.5px;
+}
+
+.dropdownIcon {
+  height: 15px;
+}
+
+.filter ul {
+  position: absolute;
+  margin-top: 4px;
+  z-index: 100;
+}
+
+.filter li {
+  padding: 7px 22px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.filter li:first-child {
+  padding-top: 14px;
+}
+
+.filter li:last-child {
+  padding-bottom: 14px;
+}
+
+.filter li:hover {
+  padding-left: 32px;
+}
+
+/* dark mode */
+
+:global(.dark) .filter .dropdown,
+:global(.dark) .filter ul {
+  background-color: var(--dark-blue);
+  color: var(--light-gray);
+  box-shadow: 1px 1px 8px 0px var(--shadow-dark-color);
+}
