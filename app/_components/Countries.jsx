@@ -56,6 +56,7 @@ function Country({ country, priority }) {
             fill
             className={styles.flagImage}
             priority={priority}
+            fetchPriority={priority ? "high" : "auto"}
           />
         </div>
         <div className={styles.details}>
