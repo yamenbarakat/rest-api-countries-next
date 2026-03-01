@@ -64,6 +64,7 @@ async function CountryDetails({ params }) {
               alt={flags.alt || `${name.common} flag`}
               fill
               className={styles.flag}
+              sizes="(max-width: 950px) 100vw, 50vw"
               priority
             />
           </div>

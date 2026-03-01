@@ -24,6 +24,18 @@
   box-shadow: 0 0 5px var(--shadow-color);
 }
 
+.flagWrapper {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  position: relative;
+  background: #f0f0f0;
+  border-radius: 6px 6px 0 0;
+}
+
+.flagImage {
+  object-fit: cover;
+}
+
 .details {
   padding: 16px 25px 25px;
   font-size: 15px;

@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import styles from "./FilterRegion.module.css";
-//import { useQuery } from "../_custom-hooks/useQuery";
 
 export default function Filter() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +10,6 @@ export default function Filter() {
   const { replace } = useRouter(); // For pushing changes to the URL
   const searchParams = useSearchParams(); // For reading current URL state
   const dropdownRef = useRef(null);
-  //const { setQuery } = useQuery(); //
 
   const regions = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
   const currentRegion = searchParams.get("region") ?? "Filter by Region";
@@ -22,7 +20,6 @@ export default function Filter() {
 
   function handleSetRegion(region) {
     setIsOpen(false);
-    //setQuery("");
 
     // 1. Create a URLSearchParams object from the current searchParams
     const params = new URLSearchParams(searchParams.toString());

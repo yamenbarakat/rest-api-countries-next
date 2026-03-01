@@ -49,13 +49,15 @@ function Country({ country, priority }) {
   return (
     <li className={styles.country}>
       <Link href={`/country/${country.cca3}`}>
-        <Image
-          src={country.flags.png}
-          alt={`${country.name.common} flag`}
-          width={240}
-          height={150}
-          priority={priority}
-        />
+        <div className={styles.flagWrapper}>
+          <Image
+            src={country.flags.png}
+            alt={`${country.name.common} flag`}
+            fill
+            className={styles.flagImage}
+            priority={priority}
+          />
+        </div>
         <div className={styles.details}>
           <h2>{country.name.common}</h2>
           <dl>
