@@ -7,6 +7,13 @@ import Image from "next/image";
 import Spinner from "@/app/_components/Spinner";
 import { notFound } from "next/navigation";
 
+export async function generateStaticParams() {
+  const countries = await getAllCountries();
+  return countries.map((country) => ({
+    code: country.cca3,
+  }));
+}
+
 export async function generateMetadata({ params }) {
   const { code } = await params;
   const country = await getCountry(code);
